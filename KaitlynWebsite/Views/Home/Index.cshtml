@@ -28,30 +28,126 @@
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>*@
-<div class="container-fluid">
+<div class="container">
+	<div class="wrapper">
+		<ul id="sb-slider" class="sb-slider">
+			<li>
+				<img src="~/Content/Images/1.jpg" />
+				<div class="sb-description">
+					<h3>Creative Lifesaver</h3>
+				</div>
+			</li>
+			<li>
+				<img src="~/Content/Images/IMG_3398.JPG" />
 
-	<div class="galleria">
-		<img src="~/Content/Images/IMG_3398.JPG" data-title="test"/>
-		<img src="~/Content/Images/1.png" />
-		<img src="~/Content/Images/IMG_3402.JPG" />
-		<img src="~/Content/Images/IMG_3428.JPG" />
-		<img src="~/Content/Images/IMG_3432.JPG" />
-		<img src="~/Content/Images/IMG_3566.JPG" />
-		<img src="~/Content/Images/IMG_3724.JPG" />
+				<div class="sb-description">
+					<h3>Creative Lifesaver</h3>
+				</div>
+			</li>
+			<li>
+				<img src="~/Content/Images/IMG_3402.JPG" />
+
+				<div class="sb-description">
+					<h3>Creative Lifesaver</h3>
+				</div>
+			</li>
+			<li>
+				<img src="~/Content/Images/IMG_3428.JPG" />
+
+				<div class="sb-description">
+					<h3>Creative Lifesaver</h3>
+				</div>
+			</li>
+			<li>
+				<img src="~/Content/Images/IMG_3432.JPG" />
+
+				<div class="sb-description">
+					<h3>Creative Lifesaver</h3>
+				</div>
+			</li>
+			<li>
+				<img src="~/Content/Images/IMG_3566.JPG" />
+
+				<div class="sb-description">
+					<h3>Creative Lifesaver</h3>
+				</div>
+			<li>
+				<img src="~/Content/Images/IMG_3724.JPG" />
+
+				<div class="sb-description">
+					<h3>Creative Lifesaver</h3>
+				</div>
+			</li>
+		</ul>
+
+		<div id="shadow" class="shadow"></div>
+		<div id="nav-arrows" class="nav-arrows">
+			<a href="#">Next</a>
+			<a href="#">Previous</a>
+		</div>
+		@*<div class="galleria">
+				<img src="~/Content/Images/IMG_3398.JPG" data-title="test" />
+				<img src="~/Content/Images/1.png" />
+				<img src="~/Content/Images/IMG_3402.JPG" />
+				<img src="~/Content/Images/IMG_3428.JPG" />
+				<img src="~/Content/Images/IMG_3432.JPG" />
+				<img src="~/Content/Images/IMG_3566.JPG" />
+				<img src="~/Content/Images/IMG_3724.JPG" />
+			</div>*@
 	</div>
 </div>
 @*</div>*@
 
 @section Scripts{
 	<script>
-		$(document).ready(function () {
+		$(function () {
 
-			Galleria.loadTheme('Content/galleria/themes/classic/galleria.classic.min.js');
-			Galleria.run('.galleria', {
-				lightbox: true,
-				autoplay: true,
-				height:800
-			});
+			var Page = (function () {
+
+				var $navArrows = $('#nav-arrows').hide(),
+					$shadow = $('#shadow').hide(),
+					slicebox = $('#sb-slider').slicebox({
+						onReady: function () {
+
+							$navArrows.show();
+							$shadow.show();
+
+						},
+						orientation: 'r',
+						cuboidsRandom: true,
+						disperseFactor: 30
+					}),
+
+					init = function () {
+
+						initEvents();
+
+					},
+					initEvents = function () {
+
+						// add navigation events
+						$navArrows.children(':first').on('click', function () {
+
+							slicebox.next();
+							return false;
+
+						});
+
+						$navArrows.children(':last').on('click', function () {
+
+							slicebox.previous();
+							return false;
+
+						});
+
+					};
+
+				return { init: init };
+
+			})();
+
+			Page.init();
+
 		});
 	</script>
 }

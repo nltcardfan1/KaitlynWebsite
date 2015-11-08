@@ -25,9 +25,14 @@ namespace KaitlynWebsite
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
-					  "~/Content/site.css"));
+					  "~/Content/site.css",
+					  "~/Content/slicebox.css",
+					  "~/Content/custom.css",
+					  "~/Content/demo.css"));
 			bundles.Add(new ScriptBundle("~/bundles/plugins").Include(
-						"~/Scripts/galleria-1.4.2.min.js"));
+						"~/Scripts/galleria-1.4.2.min.js",
+						"~/Scripts/jquery.slicebox.js",
+						"~/Scripts/modernizr.custom.46884.js"));
 		}
 	}
 }
