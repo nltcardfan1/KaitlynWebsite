@@ -118,6 +118,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Audio\My Song.m4a" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
@@ -129,12 +130,16 @@
     <Content Include="Content\galleria\themes\classic\galleria.classic.js" />
     <Content Include="Content\galleria\themes\classic\galleria.classic.min.js" />
     <Content Include="Content\Images\1.jpg" />
+    <Content Include="Content\Images\confetti.gif" />
     <Content Include="Content\Images\IMG_3398.JPG" />
     <Content Include="Content\Images\IMG_3402.JPG" />
     <Content Include="Content\Images\IMG_3428.JPG" />
     <Content Include="Content\Images\IMG_3432.JPG" />
     <Content Include="Content\Images\IMG_3566.JPG" />
     <Content Include="Content\Images\IMG_3724.JPG" />
+    <Content Include="Content\Images\img_3750.jpg" />
+    <Content Include="Content\Images\img_3755.jpg" />
+    <Content Include="Images\fancy_deboss.png" />
     <Content Include="Images\nav.png" />
     <Content Include="Images\options.png" />
     <Content Include="Images\shadow.png" />
